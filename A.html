@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X Profile Picture Lookup + Editor</title>
+    <link rel="stylesheet" href="A.css">
+</head>
+<body>
+    <div class="container">
+        <h1>X Profile Picture + Effects</h1>
+        <p>Enter an X (Twitter) username to load their profile picture, then apply fun edits!</p>
+        
+        <input type="text" id="username" placeholder="e.g. elonmusk" autofocus>
+        <button onclick="fetchAvatar()">Load Avatar</button>
+        
+        <div id="controls" style="margin-top: 20px; display: none;">
+            <label for="effect">Apply effect:</label>
+            <select id="effect" onchange="applyEffect()">
+                <option value="original">Original</option>
+                <option value="grayscale">Grayscale</option>
+                <option value="sepia">Sepia</option>
+                <option value="invert">Invert Colors</option>
+                <option value="bright">Brighter (+50%)</option>
+                <option value="dark">Darker (-50%)</option>
+                <option value="pixelate">Pixelate</option>
+            </select>
+        </div>
+        
+        <div id="result">
+            <div id="avatar-container">
+                <canvas id="avatar-canvas"></canvas> <!-- We'll draw the edited image here -->
+            </div>
+            <p id="info" class="info"></p>
+            <p id="error" class="error"></p>
+        </div>
+    </div>
+    
+    <script src="A.js"></script>
+</body>
+</html>

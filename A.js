@@ -15,7 +15,7 @@ function fetchAvatar() {
         return;
     }
     
-    const url = `https://unavatar.io/twitter/${username}`;
+    const url = `https://www.google.com/s2/favicons?sz=256&domain_url=twitter.com/${user}`;
     
     avatarImg.onload = () => {
         avatarImg.style.display = 'block';

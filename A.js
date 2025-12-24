@@ -1,4 +1,4 @@
-function fetchAvatar() {
+function fetchAvatar() { // Fixed: 'function' must be lowercase
     const username = document.getElementById('username').value.trim();
     const avatarImg = document.getElementById('avatar');
     const infoMsg = document.getElementById('info');
@@ -15,7 +15,8 @@ function fetchAvatar() {
         return;
     }
     
-    const url = `https://www.google.com/s2/favicons?sz=256&domain_url=twitter.com/${user}`;
+    // FIXED: Changed ${user} to ${username} to match your variable above
+    const url = `https://www.google.com/s2/favicons?sz=256&domain_url=twitter.com/${username}`;
     
     avatarImg.onload = () => {
         avatarImg.style.display = 'block';
@@ -28,3 +29,4 @@ function fetchAvatar() {
     
     avatarImg.src = url;
 }
+

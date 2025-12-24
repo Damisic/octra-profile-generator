@@ -16,7 +16,8 @@ function fetchAvatar() { // Fixed: 'function' must be lowercase
     }
     
     // FIXED: Changed ${user} to ${username} to match your variable above
-    const url = `https://www.google.com/s2/favicons?sz=256&domain_url=twitter.com/${username}`;
+    const url = `https://unavatar.io/twitter/${username}`;
+
     
     avatarImg.onload = () => {
         avatarImg.style.display = 'block';
